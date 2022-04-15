@@ -71,6 +71,7 @@ async function subsetFont(
   const inputUnicodes = exports.hb_subset_input_unicode_set(input);
   for (let i = 0; i < text.length; i++) {
     let codepoint = text.codePointAt(i);
+    console.log(`Adding codepoint 0x${codepoint.toString(16)}`)
     exports.hb_set_add(inputUnicodes, codepoint);
     if (codepoint > 0xffff) {
       // We're dealing with a UTF-16 surrogate pair
