@@ -39,3 +39,5 @@ Cracking open [`subsetfont.ttf`](./subsetFont.ttf) in a hex editor, and referenc
         - startGlyphCode: `00 00 00 01`
 
 As you can see from the breakdown, only the `0xFFFF` codepoint is included. In this branch, I've added a `console.log` to loop over the input `text` to demonstrate that harfbuzz is being correctly invoked with the intended codepoints.
+
+(The base font is sourced from https://github.com/microsoft/fluentui-system-icons/tree/master/fonts)
